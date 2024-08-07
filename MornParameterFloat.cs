@@ -59,8 +59,6 @@ namespace MornParameter
             TryInitialize(property, ref _valueType, "_valueType");
             var paramRect = new Rect(position.x, position.y, position.width - 20, EditorGUIUtility.singleLineHeight);
             var enumRect = new Rect(position.x + position.width - 20, position.y, 20, EditorGUIUtility.singleLineHeight);
-
-            // propertyのlabelを表示
             paramRect = EditorGUI.PrefixLabel(paramRect, label);
             switch ((MornParameterFloat.ValueType)_valueType.enumValueIndex)
             {
