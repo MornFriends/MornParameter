@@ -1,7 +1,9 @@
 ﻿using System;
-using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace MornParameter
 {
@@ -40,6 +42,7 @@ namespace MornParameter
         }
     }
 
+    #if UNITY_EDITOR
     [CustomPropertyDrawer(typeof(MornParameterFloat))]
     internal class MornParameterFloatDrawer : PropertyDrawer
     {
@@ -126,4 +129,5 @@ namespace MornParameter
             return EditorGUIUtility.singleLineHeight;
         }
     }
+    #endif
 }
